@@ -31,12 +31,12 @@ let counter = 0;
 const root = ReactDOM.createRoot(document.getElementById('app')); 
 
 setInterval(() => {
-    const Day = Math.floor(counter / 86400); // Segundos en un día
-    const Hour = Math.floor((counter % 86400) / 3600); // Segundos en una hora
+    const Day = Math.floor(counter / 86400); 
+    const Hour = Math.floor((counter % 86400) / 3600); 
     const Hour2 = Math.floor(Hour / 10);
-    const Minute = Math.floor((counter % 3600) / 60); // Segundos en un minuto
+    const Minute = Math.floor((counter % 3600) / 60); 
     const Minute2 = Math.floor(Minute / 10);
-    const Second = counter % 60; // Segundos en un minuto
+    const Second = counter % 60; 
     const Second2 = Math.floor(Second / 10);
 
     counter++;
@@ -45,11 +45,11 @@ setInterval(() => {
         <SimpleClock 
             numberDay={Day}
             numberHour2={Hour2}
-            numberHour={Hour % 10} // Unidades de horas
+            numberHour={Hour % 10} 
             numberMinute2={Minute2}
-            numberMinute={Minute % 10} // Unidades de minutos
+            numberMinute={Minute % 10} 
             numberSecond2={Second2}
-            numberSecond={Second % 10} // Unidades de segundos
+            numberSecond={Second % 10} 
         />
     );
 }, 1000);
